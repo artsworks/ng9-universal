@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Profile</h1>
+            <p class="lead">Profile page</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card mb-3" *ngFor="let p of profiles | async; let i = index; trackBy: trackByFn">
+            <div class="card-body">
+                <h5 class="card-title">{{p.title}} {{i + 1}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{p.subtitle}}</h6>
+                <p class="card-text">{{p.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
